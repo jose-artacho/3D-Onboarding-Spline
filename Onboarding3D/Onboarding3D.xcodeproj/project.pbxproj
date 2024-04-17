@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F44626142BCED2A300CBF184 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44626132BCED2A300CBF184 /* OnboardingView.swift */; };
 		F4E2193F2BCEC90100B0E729 /* Onboarding3DApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E2193E2BCEC90100B0E729 /* Onboarding3DApp.swift */; };
 		F4E219412BCEC90100B0E729 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E219402BCEC90100B0E729 /* ContentView.swift */; };
 		F4E219432BCEC90300B0E729 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4E219422BCEC90300B0E729 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F44626132BCED2A300CBF184 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		F4E2193B2BCEC90100B0E729 /* Onboarding3D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Onboarding3D.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4E2193E2BCEC90100B0E729 /* Onboarding3DApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding3DApp.swift; sourceTree = "<group>"; };
 		F4E219402BCEC90100B0E729 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -35,6 +37,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F44626112BCED06F00CBF184 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F44626122BCED08200CBF184 /* Onboarding */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		F44626122BCED08200CBF184 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				F44626132BCED2A300CBF184 /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		F4E219322BCEC90100B0E729 = {
 			isa = PBXGroup;
 			children = (
@@ -54,11 +72,12 @@
 		F4E2193D2BCEC90100B0E729 /* Onboarding3D */ = {
 			isa = PBXGroup;
 			children = (
-				F4E2193E2BCEC90100B0E729 /* Onboarding3DApp.swift */,
-				F4E219402BCEC90100B0E729 /* ContentView.swift */,
 				F4E219422BCEC90300B0E729 /* Assets.xcassets */,
+				F4E219402BCEC90100B0E729 /* ContentView.swift */,
 				F4E219442BCEC90300B0E729 /* Onboarding3D.entitlements */,
+				F4E2193E2BCEC90100B0E729 /* Onboarding3DApp.swift */,
 				F4E219452BCEC90300B0E729 /* Preview Content */,
+				F44626112BCED06F00CBF184 /* Scenes */,
 			);
 			path = Onboarding3D;
 			sourceTree = "<group>";
@@ -147,6 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F44626142BCED2A300CBF184 /* OnboardingView.swift in Sources */,
 				F4E219412BCEC90100B0E729 /* ContentView.swift in Sources */,
 				F4E2193F2BCEC90100B0E729 /* Onboarding3DApp.swift in Sources */,
 			);
