@@ -10,27 +10,62 @@ import SwiftUI
 
 struct OnboardingView: View {
     let title: String
+    let color: Color
     let animationUrl: String
     let description: String
     
     var body: some View {
-        VStack {
-            let url = URL(string: animationUrl)!
-            try? SplineView(sceneFileURL: url).ignoresSafeArea(.all)
+        
+        ZStack {
             
-            Text(title)
-                .font(.headline)
-            Text(description)
-                .multilineTextAlignment(.center)
-                .padding()
+            backgroundColor
             
-            Spacer()
+            VStack {
+                
+                splineAnimation
+                
+                labels
+            }
         }
+    }
+    
+    @ViewBuilder
+    var backgroundColor: some View {
+        #if os(visionOS)
+        Color.clear
+        #else
+        color.ignoresSafeArea()
+        #endif
+    }
+    
+    @ViewBuilder
+    var splineAnimation: some View {
+        if let url = URL(string: animationUrl) {
+            try? SplineView(sceneFileURL: url)
+            
+        }
+    }
+    
+    @ViewBuilder
+    var labels: some View {
+        Text(title)
+            .font(.title2)
+            .foregroundStyle(.black)
+            .bold()
+            .padding()
+        
+        Text(description)
+            .font(.headline)
+            .multilineTextAlignment(.center)
+            .foregroundStyle(.white)
+            .padding(.horizontal, 16)
+            .padding(.bottom, 50)
     }
 }
 
 #Preview {
-    OnboardingView(title: "Finn",
-                   animationUrl: "https://build.spline.design/c4wPWTgvnmI7xWdN3L3c/scene.splineswift",
-                   description: "Finn was adopted as an infant by two anthropomorphic dogs named Joshua and Margaret, who found him in the woods")
+    OnboardingView(title: "Make it your own",
+                   color: Color.secondTab,
+                   animationUrl: "https://build.spline.design/oQsBAJRoNQMFHE6-lHi5/scene.splineswift",
+                   description: "Personalize your experience to suit your needs and share it in our community.")
 }

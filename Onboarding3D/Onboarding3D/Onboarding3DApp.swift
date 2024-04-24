@@ -12,6 +12,6 @@ struct Onboarding3DApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-        }
+        }.defaultSize(CGSize(width: 400, height: 800))
     }
 }
